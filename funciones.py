@@ -8,6 +8,11 @@ def saludar(nombre):
     print("Hola " + nombre + " soy tu asistente personal" )
 
 def obtener_opciones():
-    mostrar_menu()
-    opcion = int(input("Ingrese su opción: "))
-    return opcion
+    while True:
+        mostrar_menu()
+        try:
+            opcion = int(input("Ingrese su opción: "))
+            return opcion
+        except ValueError:  
+            print("Eso no es un número.")
+            
