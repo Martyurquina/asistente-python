@@ -1,17 +1,11 @@
 
-from funciones import obtener_opciones,saludar
+from funciones import obtener_opciones,ejecutar_opcion
 
 nombre = input("¿Cómo te llamás?")
-opcion = 0
-while opcion !=3:
+continuar = True
+
+while continuar:
     opcion = obtener_opciones()
-    if (opcion == 1) :
-        saludar(nombre)
-    elif(opcion == 2):
-        print(nombre)
-    elif (opcion == 3):
-        print("ADIOS")
-    else:
-        print ("opcion incorrecta")
+    continuar = ejecutar_opcion(opcion,nombre)
 
     
